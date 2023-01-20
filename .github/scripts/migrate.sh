@@ -159,18 +159,3 @@ find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
 find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%------%%%---/---%%%------%%%---/g' {} +
 find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%---/---%%%------%%%---/g' {} +
 find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
-
-# find . -name 'test.md' -exec sed 's/\[([^]]*)\]\((?!http)([^.]*)\.md\)/[\1](\2)/g' {} +
-
-#find . -name '*.md' -exec sed 's/\[([^\[]+)\]\((?!http:|https:)(.*).md(#?.*)\)/\[\\1]\(\\2\\3)/g' {} +
-
-#find . -name '*.md' -exec sed 's/\[(.*)\]\((.*)\/README\.md\)/[\1](\2/)/g' {} +
-##find . -name '*.md' -exec sed -i 's/\[\([^]]*\)\]\(([^)]*)\/README\.md\)/[\1](\2\//g' {} +
-
-
-# \[([^\[]+)\]\((.*).md(#?.*)\)
-# \[([^\[]+)\]\((?!http:|https:)(.*).md(#?.*)\)
-
-#sed 's/\[(.*)\]\((.*)\)/[\1](\2\/test/g' test.md
-
-# git diff --diff-filter=M
