@@ -120,5 +120,3 @@ The modal content template has different options for fixed inner containers. The
     Modal Bottom
 {% endblock %}
 ```
-
-

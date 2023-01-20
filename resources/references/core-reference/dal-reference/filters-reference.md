@@ -17,6 +17,7 @@ The `Equals` filter allows you to check fields for an exact value. The following
 
 <Tabs>
 <Tab title="PHP Criteria">
+
 ```php
 $criteria = new Criteria();
 $criteria->addFilter(new EqualsFilter('stock', 10));
@@ -24,6 +25,7 @@ $criteria->addFilter(new EqualsFilter('stock', 10));
 </Tab>
 
 <Tab title="API Criteria">
+
 ```javascript
  {
     "filter": [
@@ -44,6 +46,7 @@ The `EqualsAny` filter allows you to filter a field where at least one of the de
 
 <Tabs>
 <Tab title="PHP Criteria">
+
 ```php
 $criteria = new Criteria();
 $criteria->addFilter(
@@ -53,6 +56,7 @@ $criteria->addFilter(
 </Tab>
 
 <Tab title="API Criteria">
+
 ```json
 {
     "filter": [
@@ -76,6 +80,7 @@ The `Contains` Filter allows you to filter a field to an approximate value, wher
 
 <Tabs>
 <Tab title="PHP Criteria">
+
 ```php
 $criteria = new Criteria();
 $criteria->addFilter(new ContainsFilter('name', 'Lightweight'));
@@ -83,6 +88,7 @@ $criteria->addFilter(new ContainsFilter('name', 'Lightweight'));
 </Tab>
 
 <Tab title="API Criteria">
+
 ```json
 {
     "filter": [
@@ -110,6 +116,7 @@ The following SQL statement is executed in the background: `WHERE stock >= 20 AN
 
 <Tabs>
 <Tab title="PHP Criteria">
+
 ```php
 $criteria = new Criteria();
 $criteria->addFilter(
@@ -122,6 +129,7 @@ $criteria->addFilter(
 </Tab>
 
 <Tab title="API Criteria">
+
 ```json
 {
     "filter": [
@@ -145,6 +153,7 @@ The `Not` Filter is a container which allows to negate any kind of filter. The `
 
 <Tabs>
 <Tab title="PHP Criteria">
+
 ```php
 $criteria = new Criteria();
 $criteria->addFilter(new EqualsFilter('active', true));
@@ -162,6 +171,7 @@ $criteria->addFilter(
 </Tab>
 
 <Tab title="API Criteria">
+
 ```json
 {
     "filter": [
@@ -198,6 +208,7 @@ The `Multi` Filter is a container, which allows to set logical links between fil
 
 <Tabs>
 <Tab title="PHP Criteria">
+
 ```php
 $criteria = new Criteria();
 $criteria->addFilter(
@@ -216,6 +227,7 @@ $criteria->addFilter(
 </Tab>
 
 <Tab title="API Criteria">
+
 ```javascript
  {
     "filter": [
@@ -252,6 +264,7 @@ The `Prefix` Filter allows you to filter a field to an approximate value, where 
 
 <Tabs>
 <Tab title="PHP Criteria">
+
 ```php
 $criteria = new Criteria();
 $criteria->addFilter(new PrefixFilter('name', 'Lightweight'));
@@ -259,6 +272,7 @@ $criteria->addFilter(new PrefixFilter('name', 'Lightweight'));
 </Tab>
 
 <Tab title="API Criteria">
+
 ```json
 {
     "filter": [
@@ -279,6 +293,7 @@ The `Suffix` Filter allows you to filter a field to an approximate value, where 
 
 <Tabs>
 <Tab title="PHP Criteria">
+
 ```php
 $criteria = new Criteria();
 $criteria->addFilter(new SuffixFilter('name', 'Lightweight'));
@@ -286,6 +301,7 @@ $criteria->addFilter(new SuffixFilter('name', 'Lightweight'));
 </Tab>
 
 <Tab title="API Criteria">
+
 ```json
 {
     "filter": [
@@ -299,4 +315,3 @@ $criteria->addFilter(new SuffixFilter('name', 'Lightweight'));
 ```
 </Tab>
 </Tabs>
-

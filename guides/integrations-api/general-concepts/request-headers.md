@@ -23,3 +23,8 @@ Shopware 6 allows developers to define inheritance \(parent-child\) relationship
 POST /api/search/product
 --header 'sw-inheritance: 1'
 ```
+
+```bash
+POST /api/search/product
+--header 'sw-inheritance: 1'
+```

@@ -282,7 +282,6 @@ class ExamplePayment implements PreparedPaymentHandlerInterface
         return [];
     }
 }
-
 ```
 
 ### Refund example

@@ -153,4 +153,3 @@ See comments for different successful responses
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-

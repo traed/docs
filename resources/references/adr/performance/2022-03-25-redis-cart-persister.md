@@ -79,4 +79,3 @@ shopware:
 ```
 
 **Notice:** Currently there is no migration path to transfer shopping carts from one storage to the other.
-

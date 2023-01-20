@@ -62,5 +62,3 @@ example_route:
         - limit: 5
           interval: '60 seconds'
 ```
-
-

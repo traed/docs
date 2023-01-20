@@ -372,7 +372,6 @@ POST /api/notification
     "adminOnly": "true",
     "requiredPrivileges": []
 }
-
 ```
 
 * `status`: Notification status, one of `success`, `error`, `info`, `warning`.
@@ -588,7 +587,6 @@ ApiKey used to authenticate against the Shopware API
 {% endapi-method-response-example-description %}
 
 ```text
-
 ```
 
 {% endapi-method-response-example %}

@@ -10,6 +10,7 @@ The Cache Stampede protection is a mechanism to prevent several users try to upd
 We have now integrated such a protection into all our services using the [`\Symfony\Contracts\Cache\CacheInterface` of symfony](https://symfony.com/blog/new-in-symfony-4-2-cache-stampede-protection). This mechanic is mainly used in our cached store api routes. Another positive side effect is that the code has become much more concise, since much is done within symfony:
 
 ## `CachedRuleLoader` before
+
 ```php
 <?php declare(strict_types=1);
 
@@ -69,6 +70,7 @@ class CachedRuleLoader extends AbstractRuleLoader
 ```
 
 ## `CachedRuleLoader` after
+
 ```php
 <?php declare(strict_types=1);
 

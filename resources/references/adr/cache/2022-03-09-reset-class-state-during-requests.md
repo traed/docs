@@ -28,6 +28,7 @@ Additionally, it makes unit testing easier, as phpunit already reuses service in
 ## Consequences
 
 Wherever we have a class that holds some memoized data in an instance variable e.g.
+
 ```php
 class FooService
 {
@@ -45,6 +46,7 @@ class FooService
 ```
 
 We will implement the `ResetInterface` and provide a `reset()` method, to reset that internal state between requests:
+
 ```php
 use Symfony\Contracts\Service\ResetInterface;
 
@@ -69,6 +71,7 @@ class FooService implements ResetInterface
 ```
 
 And additionally we will tag the service with the `kernel.reset` tag:
+
 ```xml
 <service id="FooService">
     <tag name="kernel.reset" method="reset"/>

@@ -43,7 +43,6 @@ The new tag is `<css>` and takes the name of the scss variable as its value.
     <css>sass-plugin-header-bg-color</css>
     <defaultValue>#eee</defaultValue>
 </input-field>
-
 ```
 
 This value will now be exposed as SCSS variable and will have the value set in the administration or the default value if not set. **When this value is changed you still have to recompile the theme manually for the changes to take effect.**

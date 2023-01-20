@@ -173,6 +173,7 @@ Let's first have a look at such an example class:
 
 <Tabs>
 <Tab title="ExamplePageSeoUrlRoute.php">
+
 ```php
 // <plugin root>/src/Storefront/Framework/Seo/SeoUrlRoute/ExamplePageSeoUrlRoute.php
 <?php declare(strict_types=1);
@@ -236,6 +237,7 @@ class ExamplePageSeoUrlRoute implements SeoUrlRouteInterface
 </Tab>
 
 <Tab title="services.xml">
+
 ```xml
 // <plugin root>/src/Resources/config/services.xml
 <?xml version="1.0" ?>
@@ -292,6 +294,7 @@ Once again, let's have a look at an example subscriber here:
 
 <Tabs>
 <Tab title="DynamicSeoUrlPageSubscriber.php">
+
 ```php
 // <plugin root>/src/Service/DynamicSeoUrlPageSubscriber.php
 <?php declare(strict_types=1);
@@ -328,6 +331,7 @@ class DynamicSeoUrlPageSubscriber implements EventSubscriberInterface
 </Tab>
 
 <Tab title="services.xml">
+
 ```xml
 // <plugin root>/src/Resources/config/services.xml
 <?xml version="1.0" ?>

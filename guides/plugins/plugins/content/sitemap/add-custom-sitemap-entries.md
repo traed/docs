@@ -33,6 +33,7 @@ Let's have a look at the example class:
 
 <Tabs>
 <Tab title="CustomUrlProvider.php">
+
 ```php
 // <plugin root>/src/Core/Content/Sitemap/Provider/CustomUrlProvider.php
 <?php declare(strict_types=1);
@@ -144,6 +145,7 @@ class CustomUrlProvider extends AbstractUrlProvider
 </Tab>
 
 <Tab title="services.xml">
+
 ```xml
 // <plugin root>/src/Resources/config/services.xml
 <?xml version="1.0" ?>

@@ -88,5 +88,3 @@ Last, we have to register the decorated route to the DI-container. The `ExampleR
     </services>
 </container>
 ```
-
-

@@ -23,6 +23,7 @@ For this to work, all you have to do is to register to the `MediaFileExtensionWh
 This is of course done via a [subscriber](../../plugin-fundamentals/listening-to-events).
 
 Have a look at the following code example:
+
 ```php
 // <plugin root>/src/Service/Subscriber.php
 <?php declare(strict_types=1);
@@ -74,6 +75,7 @@ Have a look at the following example:
 
 <Tabs>
 <Tab title="CustomImageTypeDetector.php">
+
 ```php
 // <plugin root>/src/Core/Content/Media/TypeDetector/CustomImageTypeDetector.php
 <?php declare(strict_types=1);
@@ -112,6 +114,7 @@ class CustomImageTypeDetector implements TypeDetectorInterface
 </Tab>
 
 <Tab title="services.xml">
+
 ```xml
 // <plugin root>/src/Resources/config/services.xml
 <?xml version="1.0" ?>

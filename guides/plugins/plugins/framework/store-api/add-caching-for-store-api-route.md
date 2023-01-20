@@ -22,6 +22,7 @@ First, we create an abstract class called `CachedExampleRoute` which extends the
 
 <Tabs>
 <Tab title="CachedExampleRoute">
+
 ```php
 // <plugin root>/src/Core/Content/Example/SalesChannel/CachedExampleRoute.php
 <?php declare(strict_types=1);
@@ -151,6 +152,7 @@ class CachedExampleRoute extends AbstractExampleRoute
 </Tab>
 
 <Tab title="services.xml">
+
 ```xml
 // <plugin root>/src/Resources/config/services.xml
 
@@ -170,7 +172,6 @@ class CachedExampleRoute extends AbstractExampleRoute
         </service>
     </services>
 </container>
-
 ```
 
 </Tab>
@@ -243,6 +244,7 @@ class CacheInvalidationSubscriber implements EventSubscriberInterface
 </Tab>
 
 <Tab title="services.xml">
+
 ```xml
 // <plugin root>/src/Resources/config/services.xml
 
@@ -258,7 +260,6 @@ class CacheInvalidationSubscriber implements EventSubscriberInterface
         </service>
     </services>
 </container>
-
 ```
 
 </Tab>

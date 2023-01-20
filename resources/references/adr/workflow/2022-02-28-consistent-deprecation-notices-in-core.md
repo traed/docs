@@ -43,6 +43,7 @@ The method will then trigger a deprecation notice if the major feature flag is n
 This ensures, that we inside the core don't rely on deprecated functionality as we have a test-pipeline where the major feature flag is set to true.
 
 A POC implementation in the `Feature`-class can look something like this:
+
 ```php
     public static function triggerDeprecationOrThrow(string $message, string $majorFlag): void
     {

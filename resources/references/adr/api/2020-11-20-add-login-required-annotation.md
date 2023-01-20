@@ -19,6 +19,7 @@ This annotation to the following:
     * This annotation is validating the `SalesChannelContext` has Customer and allow Guest admits, otherwise throw `CustomerNotLoggedInException`
 
 An example looks like the following:
+
 ```php
 /**
  * @Since("6.0.0.0")

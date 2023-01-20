@@ -40,6 +40,7 @@ Because of the aforementioned issues we decided to discard this approach.
 We will expand the abstract class `AbstractThemePathBuilder` to allow for a `seeding` mechanism that allows to change the active theme folder path based on a randomly generated seed.
 
 We add the two following methods that should be implemented in custom implementations of the `AbstractThemePathBuilder`.
+
 ```php
     public function generateNewPath(string $salesChannelId, string $themeId, string $seed): string
     {

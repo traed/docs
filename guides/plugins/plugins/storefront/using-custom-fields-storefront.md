@@ -54,5 +54,3 @@ Now, we finally add our custom field as explained before:
     {{ "customFields.my_test_field"|trans|sw_sanitize }}: {{ page.product.translated.customFields.my_test_field }}
 {% endblock %}
 ```
-
-

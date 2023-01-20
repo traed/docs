@@ -51,7 +51,6 @@ Next, we will put our basic configuration into the file we just created.
         <license>MIT</license>
     </meta>
 </manifest>
-
 ```
 
 ## Set up communication between Shopware and the app
@@ -69,7 +68,6 @@ SimpleNotification/
 ├─ src/
 │  ├─ index.html
 ├─ manifest.xml
-
 ```
 
 ```html
@@ -86,7 +84,6 @@ SimpleNotification/
         });
     </script>
 </html>
-
 ```
 
 This file contains the basic setup for our app to display the notification:

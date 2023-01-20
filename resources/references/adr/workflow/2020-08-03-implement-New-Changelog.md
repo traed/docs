@@ -111,4 +111,3 @@ If you just want to get the changes of a specific version or even just a special
 `bin/console changelog:change [<version>] [options]`
 
 Use the `--help` flag of the command to see all possible options.
-

@@ -17,7 +17,6 @@ $this->stateMachineRegistry->getInitialState(OrderTransactionStates::STATE_MACHI
 ```
 
 Inside the `getInitialState`, the complete `StateMachine` object is loaded, including all `transitions` and their `from` and `to` states:
-
 ```
 $criteria = new Criteria();
 $criteria

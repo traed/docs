@@ -21,7 +21,6 @@ This way there will be no collisions in the processing of these line items. A pl
 easily call the other processors to handle the nested line items themselves.
 
 Example:
-
 ```
 <?php declare(strict_types=1);
 

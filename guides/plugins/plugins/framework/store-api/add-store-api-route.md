@@ -306,5 +306,3 @@ export default class ExamplePlugin extends Plugin {
     }
 }
 ```
-
-

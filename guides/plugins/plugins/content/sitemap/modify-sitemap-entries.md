@@ -25,6 +25,7 @@ this class `DecoratedProductUrlProvider`:
 
 <Tabs>
 <Tab title="DecoratedProductUrlProvider.php">
+
 ```php
 // <plugin root>/src/Core/Content/Sitemap/Provider/DecoratedProductUrlProvider.php
 <?php declare(strict_types=1);
@@ -66,6 +67,7 @@ class DecoratedProductUrlProvider extends AbstractUrlProvider
 </Tab>
 
 <Tab title="services.xml">
+
 ```xml
 // <plugin root>/src/Resources/config/services.xml
 <?xml version="1.0" ?>

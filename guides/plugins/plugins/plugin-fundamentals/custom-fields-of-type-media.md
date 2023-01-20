@@ -67,5 +67,3 @@ To read the media objects within the product listing we recommend the following 
     {% endfor %}
 {% endblock %}
 ```
-
-

@@ -63,6 +63,7 @@ class CustomerRoute extends AbstractCustomerRoute
 ### It is not possible to provide further functions in the class 
 If we have to implement another function in an interface this is only possible in a very complicated way.
 * a new interface is implemented which extends the old one:
+
 ```php
 interface DataValidationFactoryInterface
 {
@@ -103,6 +104,7 @@ abstract class AbstractCustomerRoute
 ```
 
 At the appropriate place where the class is called, we can simply use the new function without checking if the current service instance already contains the new method:
+
 ```php
 $service->loadV2(..);
 ```

@@ -57,4 +57,3 @@ The pageloader always returns a page-object.
 All dependencies in the controllers for routes which render a page have to be moved to the `Loaders` and if still missing, the `Loader` and `Page` has to be created.
 All direct DAL-dependencies inside the storefront have to be moved to Store-Api routes and respective calls.
 All other dependencies which are not allowed have to be checked for individual alternatives
-

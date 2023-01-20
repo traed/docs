@@ -230,4 +230,3 @@
     </rule-conditions>
 </manifest>
 ```
-

@@ -20,6 +20,7 @@ For flow actions, configuration parameters may be necessary that can be stored i
 4) `<config>` - configuration information for the admin UI
 
 A complete XML structure looks like this:
+
 ```xml
 <flow-actions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://test-flow.com/flow-action-1.0.xsd">
     <flow-action>
@@ -48,4 +49,3 @@ A complete XML structure looks like this:
     </flow-action>
 </flow-actions>
 ```
-

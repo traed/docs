@@ -37,5 +37,3 @@ Starting from now, newly introduced rule conditions will make use of the `Rule::
 The original components of conditions are being deprecated and marked to be removed by the next major release.
 
 If you used or extended any of these components, use/extend `sw-condition-generic` or `sw-condition-generic-line-item` instead and refer to `this.condition.type` to introduce changes for a specific type of condition.
-
-

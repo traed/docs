@@ -31,6 +31,7 @@ This flag will also result in new component types, so that for example the `cms-
 ![Category menu with Content types](../assets/content-management/example-cms-aware-admin-menu.png)
 
 #### Example `admin-ui.xml`
+
 ```xml
 <admin-ui>
     <entity name="custom_entity_example"
@@ -85,6 +86,7 @@ This flag will also result in new component types, so that for example the `cms-
 ```
 
 #### Example `cms-aware.xml`
+
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <cms-aware xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -103,6 +105,7 @@ The CMS page template assigned to the category will contain a post listing.
 With content types in mind, this will be an additional step to be auto generated via the `cms-aware` flag of Custom Entities.
 
 ### Basic blog structure
+
 ```mermaid
 erDiagram
     blog_post {
@@ -139,6 +142,7 @@ erDiagram
 
 ### Snippet structure
 Modules generated via `admin-ui.xml` are automatically referring to the following snippet structure:
+
 ```json
 {
    "custom_entity_bundle": {

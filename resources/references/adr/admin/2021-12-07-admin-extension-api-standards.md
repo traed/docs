@@ -21,6 +21,7 @@ Extensions can render custom views with the Admin-Extension-API via iFrames. To 
 An app wants to render a custom iFrame in a card on the dashboard. The "location" of the iFrame has then a specific "locationID" like `sw-dashboard-example-app-dashboard-card`. The app can also render another iFrames which also get "locationIDs". In our example it is a iFrame in a custom modal: `example-app-example-modal-content`.
 
 The app want to render different views depending on the "location" of the iFrame. So the app developer can render the correct view depending on the "locationID":
+
 ```js
 if (sw.location.is('sw-dashboard-example-app-dashboard-card')) {
     renderDashboardCard();
@@ -37,6 +38,7 @@ Developers can extend existing areas or create new areas in the administration w
 *Example:*
 
 An app wants to add a new tab item to a tab-bar. In the administration are many tab-bars available. So the developer needs to choose the correct "positionID" to determine which tab-bar should be extended. In this example the developer adds a new tab item to the tab-bar in the product detail page.
+
 ```js
 sw.ui.tabs('sw-product-detail').addTabItem({ ... })
 ```

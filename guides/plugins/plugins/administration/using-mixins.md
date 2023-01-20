@@ -35,5 +35,3 @@ Component.register('swag-basic-example', {
     }
 });
 ```
-
-

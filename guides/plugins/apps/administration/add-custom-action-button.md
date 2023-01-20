@@ -102,7 +102,6 @@ To open a new tab in the user browser you can use the `openNewTab` action type. 
     "redirectUrl": "http://google.com"
   }
 }
-
 ```
 
 ### Show a notification to the user
@@ -117,7 +116,6 @@ To send a notification, you can use the `notification` action type. You need to 
     "message": "This is the successful message"
   }
 }
-
 ```
 
 ### Reload the current page
@@ -129,7 +127,6 @@ To reload the data in the user's current page you can use the `reload` action ty
   "actionType": "reload",
   "payload": {}
 }
-
 ```
 
 ### Open a custom modal

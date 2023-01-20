@@ -125,5 +125,3 @@ protected function defineFields(): FieldCollection
     ]);
 }
 ```
-
-

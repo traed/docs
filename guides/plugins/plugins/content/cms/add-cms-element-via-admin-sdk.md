@@ -343,5 +343,3 @@ Since everything is already described in guide [CMS element development for plug
 </div>
 {% endblock %}
 ```
-
-

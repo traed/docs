@@ -143,6 +143,7 @@ The template will be sanitized from possibly malicious tags like `<script>` or a
 :::
 
 The styling of the preview looks as follows:
+
 ```css
 // <app root>/Resources/cms/blocks/swag-image-text-reversed/styles.css
 /* 
@@ -210,6 +211,7 @@ Providing the Storefront representation of your blocks works very similarly as i
 In `Resources/views/storefront/block/` a Twig template matching the pattern `cms-block-${block.name}-component.html.twig` is expected.
 
 So in this example, it's sufficient to simply extend the existing `image-text` element:
+
 ```twig
 // <app root>/Resources/views/storefront/block/cms-block-swag-image-text-reversed-component.html.twig
 {% sw_extends '@Storefront/storefront/block/cms-block-image-text.html.twig' %}

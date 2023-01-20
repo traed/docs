@@ -56,6 +56,7 @@ public function lineItemWritten(EntityWrittenEvent $event): void
 ```
 
 In addition to this optimization, we only perform a stock update if one of the three relevant fields (`stock`, `minPurchase`, `isCloseout`) has changed. This is checked in the `ProductIndexer` within the `update` method:
+
 ```php
 $stocks = $event->getPrimaryKeysWithPropertyChange(ProductDefinition::ENTITY_NAME, ['stock', 'isCloseout', 'minPurchase']);
 $this->stockUpdater->update($stocks, $event->getContext());

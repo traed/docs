@@ -55,7 +55,6 @@ Next, we will put our basic configuration into the file we just created.
         <read>product</read>
     </permissions>
 </manifest>
-
 ```
 
 Besides some metadata, like a name, description, or version, this file contains permissions that the app requires.
@@ -264,7 +263,6 @@ We can now call our endpoint again:
 curl --request GET \
   --url http://<your-store-url>/store-api/script/swag/topseller \
   --header 'sw-access-key: insert-your-access-key'
-
 ```
 
 and receive a different result:

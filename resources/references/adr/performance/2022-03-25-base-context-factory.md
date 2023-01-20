@@ -33,6 +33,7 @@ class CachedSalesChannelContextFactory extends AbstractSalesChannelContextFactor
 ```
 
 However, since there is also data in the context that is independent of a customer's data, it is possible to cache some of this resource-costing data across customers, even if the customer is logged in, has selected a different payment method, shipping method or address. For this we have implemented the `Shopware\Core\System\SalesChannel\Context\BaseContextFactory`, which is responsible for creating the `Shopware\Core\System\SalesChannel\BaseContext`. Only data that belongs to the sales channel or is independent of the customer account is loaded into the `BaseContext`:
+
 ```php
 <?php declare(strict_types=1);
 
@@ -75,6 +76,7 @@ In addition to the corresponding `$salesChannelId`, the current session paramete
 * `languageId` - Contains the id of the selected language
 
 In addition to the `Shopware\Core\System\SalesChannel\Context\BaseContextFactory` the `Shopware\Core\System\SalesChannel\Context\CachedSalesChannelContextFactory` was implemented, which is responsible for caching the base context. It assembles the cache key based on the parameters listed above and loads the base context from the cache if it has already been loaded once.
+
 ```php
 <?php declare(strict_types=1);
 

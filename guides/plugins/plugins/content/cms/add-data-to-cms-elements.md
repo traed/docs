@@ -128,5 +128,3 @@ This could be a possible solution for that:
 
 // ...
 ```
-
-

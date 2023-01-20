@@ -17,6 +17,7 @@ To extend the elasticsearch definition we need to extend the product definition 
 Here we show you how this could look like in the end.
 
 The service.xml with all needed definitions.
+
 ```xml
 // <plugin root>/src/Core/Content/DependencyInjection/product.xml
 <?xml version="1.0" ?>
@@ -51,6 +52,7 @@ The service.xml with all needed definitions.
 ```
 
 The product extension `CustomExtension.php` provides the extensions to the product entity.
+
 ```php
 // <plugin root>/src/Extension/Content/Product/CustomExtension.php
 <?php declare(strict_types=1);
@@ -91,6 +93,7 @@ class CustomExtension extends EntityExtension
 ```
 
 The entity definition `OneToManyExampleExtensionDefinition.php`.
+
 ```php
 // <plugin root>/src/Extension/Content/Product/OneToManyExampleExtensionDefinition.php
 <?php declare(strict_types=1);
@@ -139,6 +142,7 @@ class OneToManyExampleExtensionDefinition extends EntityDefinition
 ```
 
 The entity definition `OneToOneExampleExtensionDefinition.php`.
+
 ```php
 // <plugin root>/src/Extension/Content/Product/OneToOneExampleExtensionDefinition.php
 <?php declare(strict_types=1);
@@ -184,7 +188,6 @@ class OneToOneExampleExtensionDefinition extends EntityDefinition
         ]);
     }
 }
-
 ```
 
 Here is a decoration to add a new field named `customString`, an `oneToOneAssociationField` named `oneToOneExampleExtension` and an `oneToManyAssociationField` named `oneToManyExampleExtension` to the index.
@@ -329,7 +332,4 @@ class MyProductEsDecorator extends AbstractElasticsearchDefinition
         );
     }
 }
-
 ```
-
-

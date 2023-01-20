@@ -6,7 +6,7 @@
 The ArrayFacade acts as a wrapper around an array and allows easier manipulation of arrays inside scripts.
 An array facade can also be accessed like a "normal" array inside twig.
 Examples:
-{% raw %}
+
 ```twig
 {% do array.push('test') %}
 

@@ -206,6 +206,7 @@ class ProductController extends AbstractController
 
 Next, we will verify the request. For that, we need to fetch the shop data from the database. The shopRepository provides the getShopFromId method for that. The source part of the request contains the shopId.
 With that id, the shop is retrieved from the repository. The verifier then validates the request with the shop object. A failed validation raises an exception, thus stopping unauthorized requests from going through.
+
 ```php
 // src/Controller/ProductController.php
     public function productWritten(Request $request)
@@ -220,6 +221,7 @@ With that id, the shop is retrieved from the repository. The verifier then valid
 ### Creating a shop client
 
 Once the request has been verified, you can use the `$shop` to create an api-client for that particular shop.
+
 ```php
 // src/Controller/ProductController.php
     public function productWritten(Request $request)

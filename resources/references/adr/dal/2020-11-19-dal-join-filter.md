@@ -31,6 +31,7 @@ FROM product
 
 WHERE size_filter.product_id IS NULL
 AND color_filter.product_id IS NULL
+
 ``` 
 
 ### Join filter concept
@@ -53,6 +54,7 @@ FROM product
 
 WHERE size_filter.product_id IS NOT NULL
 AND color_filter.product_id IS NOT NULL
+
 ``` 
 
 ## Decision
@@ -89,7 +91,6 @@ $criteria->addFilter(
 $criteria->addFilter(
     new EqualsFilter('product.categories.active', true)
 );
-
 ```
 
 1: Returns all products assigned to the `test-category` category where `test-category` is also active.

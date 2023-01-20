@@ -192,6 +192,7 @@ Afterwards, add the following hook to your shell:
 <Tabs>
 
 <Tab title="Bash">
+
 ```bash
 // ~/.bashrc
 eval "$(direnv hook bash)"
@@ -200,6 +201,7 @@ eval "$(direnv hook bash)"
 </Tab>
 
 <Tab title="Zsh">
+
 ```bash
 // ~/.zshrc
 eval "$(direnv hook zsh)"
@@ -208,6 +210,7 @@ eval "$(direnv hook zsh)"
 </Tab>
 
 <Tab title="Fish">
+
 ```bash
 // ~/.config/fish/config.fish
 direnv hook fish | source

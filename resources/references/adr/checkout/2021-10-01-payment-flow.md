@@ -50,4 +50,3 @@ When the charge was successful the payment will be set to paid and the user will
 Both possible options can produce failed payments. In failure case the after order payment process begins. The client can choose a new payment method and retry the payment and the entire payment loop of a synchronous / asynchronous payment starts again.
 
 ![After order payment](../../../../.gitbook/assets/adr/payment-flow/after-order-payment.svg)
-

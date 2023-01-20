@@ -170,5 +170,3 @@ class ExampleService extends AbstractExampleService
     }
 }
 ```
-
-

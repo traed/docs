@@ -74,6 +74,7 @@ class Profiler
 ```
 
 The corresponding calls of this profiler can be found everywhere in the application and can also be used in plugins:
+
 ```php
 <?php declare(strict_types=1);
 
@@ -110,6 +111,7 @@ These spans are then displayed in the timeline of the corresponding profilers:
 ![](../../../../.gitbook/assets/adr/tideways_benchmark.PNG "Tideways benchmark")
 
 Which profiler should be used in the system can be configured via `config/packages/*.yaml`:
+
 ```yaml
 shopware:
     profiler:

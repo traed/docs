@@ -63,7 +63,6 @@ class RateLimiterCompilerPass implements CompilerPassInterface
         $container->setParameter('shopware.api.rate_limiter', $rateLimiterConfig);
     }
 }
-
 ```
 
 As you can see, we're getting the current configuration of the rate limit from the DI-container and extend it by our `rate_limiter.yaml`
@@ -179,5 +178,3 @@ public function load(Request $request, SalesChannelContext $context): ExampleRou
     ...
 }
 ```
-
-
