@@ -1,10 +1,9 @@
 # 2020-08-12 - Handling feature flags
 # Superseded by [Feature flags for major versions](2022-01-20-feature-flags-for-major-versions.md)
-{% hint style="info" %}
+::: info
 This document represents an architecture decision record (ADR) and has been mirrored from the ADR section in our Shopware 6 repository.
 You can find the original version [here](https://github.com/shopware/platform/blob/trunk/adr/workflow/2020-08-19-handling-feature-flags.md)
-{% endhint %}
-
+:::
 
 ## Context
 

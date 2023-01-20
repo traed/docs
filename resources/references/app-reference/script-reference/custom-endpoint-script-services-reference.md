@@ -5,7 +5,6 @@
 
 The `cache` service allows you to invalidate the cache if some entity is updated.
 
-
 ### invalidate()
 
 * `invalidate()` allows you to invalidate all cache entries with the given tag.
@@ -154,7 +153,6 @@ _________
 ## [services.response (`Shopware\Core\Framework\Script\Api\ScriptResponseFactoryFacade`)](https://github.com/shopware/platform/blob/trunk/src/Core/Framework/Script/Api/ScriptResponseFactoryFacade.php) {#scriptresponsefactoryfacade}
 
 The `response` service allows you to create HTTP-Responses.
-
 
 ### json()
 

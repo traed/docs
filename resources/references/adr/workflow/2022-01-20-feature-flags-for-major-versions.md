@@ -1,9 +1,9 @@
 # 2022-01-20 - Feature flags for major versions
 
-{% hint style="info" %}
+::: info
 This document represents an architecture decision record (ADR) and has been mirrored from the ADR section in our Shopware 6 repository.
 You can find the original version [here](https://github.com/shopware/platform/blob/trunk/adr/workflow/2022-01-20-feature-flags-for-major-versions.md)
-{% endhint %}
+:::
 
 ## Context
 Feature flags enable the developer to create new code which is hidden behind the flag and merge it into the trunk branch, even when the code is not finalized.
@@ -155,7 +155,6 @@ data() {
     <span>Feature is active</span>
 {% endif %}
 ```
-
 
 ### Using flags in plugins:
 Feature flags can also be used in plugins.

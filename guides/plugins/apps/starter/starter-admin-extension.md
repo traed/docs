@@ -2,9 +2,9 @@
 
 In this guide, you will learn how to set up an extension for the Administration UI.
 
-{% hint style="info" %}
+::: info
 When you are using a self-hosted Shopware version, make sure to set the feature flag `FEATURE_NEXT_17950=1` to enable the Admin Extension API.
-{% endhint %}
+:::
 
 ![An admin notification](../../../../.gitbook/assets/extension-api-notification.png)
 
@@ -31,15 +31,14 @@ SimpleNotification/
 ├─ manifest.xml
 ```
 
-{% hint style="info" %}
+::: info
 When you are using a self-hosted Shopware version, you can also create the project directory in the `custom/apps` directory of your Shopware installation. However, the descriptions in this guide apply to both Shopware cloud and self-hosted stores.
-{% endhint %}
+:::
 
 Next, we will put our basic configuration into the file we just created.
 
-{% code title="manifest.xml" %}
-
 ```xml
+// manifest.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/Framework/App/Manifest/Schema/manifest-1.0.xsd">
     <meta>
@@ -54,8 +53,6 @@ Next, we will put our basic configuration into the file we just created.
 </manifest>
 
 ```
-
-{% endcode %}
 
 ## Set up communication between Shopware and the app
 
@@ -75,9 +72,8 @@ SimpleNotification/
 
 ```
 
-{% code title="src/index.html" %}
-
 ```html
+// src/index.html
 <!doctype html>
 <html>
     <head>
@@ -92,8 +88,6 @@ SimpleNotification/
 </html>
 
 ```
-
-{% endcode %}
 
 This file contains the basic setup for our app to display the notification:
 
@@ -118,9 +112,8 @@ The final step of the setup is to configure your app to use that file as an entr
 
 In order to do that, we have to add an `admin` section to our `manifest.xml` file and pass it into the `base-app-url` tag:
 
-{% code title="manifest.xml" %}
-
 ```xml
+// manifest.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/Framework/App/Manifest/Schema/manifest-1.0.xsd">
     <meta>
@@ -132,8 +125,6 @@ In order to do that, we have to add an `admin` section to our `manifest.xml` fil
 </manifest>
 ```
 
-{% endcode %}
-
 Since the URL to your entry point is only available locally, you will only be able to see changes on your own machine. If you want to share it, for development purposes, you need to host the entry point file somewhere or use services to expose local files as public URLs, such as [ngrok](https://ngrok.com/).
 
 For production usage, you should host the entry point file on a public CDN or a static site hosting.
@@ -142,9 +133,9 @@ For production usage, you should host the entry point file on a public CDN or a 
 
 In this last step, we will install the app using the Shopware CLI tools.
 
-{% hint style="info" %}
+::: info
 If this is your first time using the Shopware CLI, you have to [install](https://sw-cli.fos.gg/install/) it first. Next, configure it using the `shopware-cli project config init` command.
-{% endhint %}
+:::
 
 ```bash
 shopware-cli project extension upload SimpleNotification --activate --increase-version

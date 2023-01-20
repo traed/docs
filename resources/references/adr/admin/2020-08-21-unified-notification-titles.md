@@ -1,9 +1,9 @@
 # 2020-08-21 - Notification titles are pre-defined and make use of the global namespace
 
-{% hint style="info" %}
+::: info
 This document represents an architecture decision record (ADR) and has been mirrored from the ADR section in our Shopware 6 repository.
 You can find the original version [here](https://github.com/shopware/platform/blob/trunk/adr/admin/2020-08-21-unified-notification-titles.md)
-{% endhint %}
+:::
 
 ## Context
 
@@ -71,6 +71,5 @@ It would cross the design idea of unified titles though and should only be consi
 > *When creating notifications, just decide on the correct type of notification, 
  add a meaningful message, don't waste even a thought on creating a title...
  And you're done!*
-
 
 

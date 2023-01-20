@@ -119,7 +119,6 @@ _________
 
 The `config` service allows you to access the shop's and your app's configuration values.
 
-
 ### get()
 
 * The `get()` method allows you to access all config values of the store.

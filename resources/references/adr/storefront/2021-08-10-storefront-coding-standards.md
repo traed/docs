@@ -1,9 +1,9 @@
 # 2021-08-10 - Storefront coding standars
 
-{% hint style="info" %}
+::: info
 This document represents an architecture decision record (ADR) and has been mirrored from the ADR section in our Shopware 6 repository.
 You can find the original version [here](https://github.com/shopware/platform/blob/trunk/adr/storefront/2021-08-10-storefront-coding-standards.md)
-{% endhint %}
+:::
 
 ## Context
 
@@ -51,7 +51,6 @@ The pageLoaders are a specific class to load the data for a given page.
 The controller calls the pageloader, which collects the needed data for that page via the Store-api.
 The pageloader can call other pageletloaders to get the data for pagelets(subcontent for a page).
 The pageloader always returns a page-object.
-
 
 ## Consequences
 

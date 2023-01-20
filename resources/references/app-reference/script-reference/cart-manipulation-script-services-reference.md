@@ -200,7 +200,6 @@ _________
 
 The CartPriceFacade is a wrapper around the calculated price of a cart.
 
-
 ### getNet()
 
 * `getNet()` returns the net price of the cart.
@@ -403,7 +402,6 @@ _________
 
 The ItemFacade is a wrapper around one line-item.
 
-
 ### getPrice()
 
 * `getPrice()` returns the calculated price of the line-item.
@@ -502,7 +500,6 @@ _________
 
 The ItemsFacade is a wrapper around a collection of line-items.
 
-
 ### add()
 
 * `add()` adds a line-item to this collection.
@@ -586,7 +583,6 @@ _________
 
 The PriceFacade is a wrapper around a price.
 
-
 ### getTotal()
 
 * `getTotal()` returns the total price for the line-item.
@@ -635,7 +631,6 @@ _________
 ## [`Shopware\Core\Checkout\Cart\Facade\ProductsFacade`](https://github.com/shopware/platform/blob/trunk/src/Core/Checkout/Cart/Facade/ProductsFacade.php) {#productsfacade}
 
 The ProductsFacade is a wrapper around a collection of product line-items.
-
 
 ### get()
 
@@ -728,7 +723,6 @@ _________
 ## [`Shopware\Core\Checkout\Cart\Facade\StatesFacade`](https://github.com/shopware/platform/blob/trunk/src/Core/Checkout/Cart/Facade/StatesFacade.php) {#statesfacade}
 
 The StatesFacade allows access to the current cart states and functions.
-
 
 ### add()
 
