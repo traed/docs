@@ -24,13 +24,13 @@ $examples = [
 $transformer = function ($content) {
     // replace .md with empty string
     $content = preg_replace(
-        '_\[([^\[]+)\]\((?!http:|https:)(.*).md(#?.*)\)_',
+        '_\[([^\[]+)\]\((?!http:|https:)([^\)]*).md(#?[^\)]*)\)_',
         '[\\1](\\2\\3)',
         $content
     );
     // replace /README with /
     return preg_replace(
-        '_\[([^\[]+)\]\((?!http:|https:)(.*)/README(#?.*)\)_',
+        '_\[([^\[]+)\]\((?!http:|https:)([^\)]*)/README(#?[^\)]*)\)_',
         '[\\1](\\2/\\3)',
         $content
     );
