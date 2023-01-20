@@ -1,6 +1,11 @@
 #! /usr/bin/env bash
 set -e
 
+# make proper line endings
+#find . -name '*.md' -exec sed -ri 's/\r\n/\n/' {} +
+#find . -name '*.md' -exec sed -ri 's/\n\r/\n/' {} +
+#exit
+
 # hints + typos
 find . -name '*.md' -exec sed -i 's/{% hint style="info" %}/::: info/g' {} +
 find . -name '*.md' -exec sed -i 's/{% hint style="info %}/::: info/g' {} +
@@ -154,8 +159,53 @@ find . -name '*.md' -exec sed -i 's/{% code %}//g' {} +
 # endcode
 find . -name '*.md' -exec sed -i 's/{% endcode %}//g' {} +
 
+# add new line to the end of the file
+find . -name '*.md' -exec sed -i -e '$a\' {} +
+find . -name '*.md' -exec sed -i -e '$a\' {} +
+
+# Fenced code blocks should be surrounded by blank lines
+#find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%---```\([a-zA-Z]+\)/---%%%------%%%---```\1/g' {} +
+#find . -name '*.md' -exec sed -i 's/```---%%%------%%%---/```---%%%------%%%------%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%---/---%%%------%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%------%%%---```---%%%---/---%%%---```---%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%---```---%%%---/---%%%---```---%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%------%%%---```---%%%---/---%%%---```---%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%------%%%---```---%%%---/---%%%---```---%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%------%%%---```---%%%---/---%%%---```---%%%---/g' {} +
+#find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
+# fix blank lines
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%---```\([a-zA-Z]*\)/---%%%------%%%---```\1/g' {} +
+#find . -name '*.md' -exec sed -i 's/```---%%%------%%%---/```---%%%------%%%------%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%---/---%%%------%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%------%%%---```---%%%---/---%%%---```---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%---```/---%%%------%%%---```/g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%---```---%%%---/---%%%---```---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%------%%%---```---%%%---/---%%%---```---%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%------%%%---```---%%%---/---%%%---```---%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's_---%%%------%%%------%%%------%%%---_---%%%------%%%---_g' {} +
+#find . -name '*.md' -exec sed -i 's_---%%%------%%%------%%%---_---%%%------%%%---_g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%------%%%---```---%%%---/---%%%---```---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%---$//g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%------%%%---```$/---%%%---```/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
+exit
+
 # four and three newlines
 find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
 find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%------%%%---/---%%%------%%%---/g' {} +
 find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%---/---%%%------%%%---/g' {} +
 find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
+# remove multiple empty lines from the end
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%---$/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%------%%%---$/---%%%---/g' {} +
+#find . -name '*.md' -exec sed -i 's/---%%%---$//g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
+# force single new line
+find . -name '*.md' -exec sed -i -e '$a\' {} +
