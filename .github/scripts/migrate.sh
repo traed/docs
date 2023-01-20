@@ -5,17 +5,31 @@ set -e
 find . -name '*.md' -exec sed -i 's/{% hint style="info" %}/::: info/g' {} +
 find . -name '*.md' -exec sed -i 's/{% hint style="info %}/::: info/g' {} +
 find . -name '*.md' -exec sed -i 's/{% hint style=info %}/::: info/g' {} +
+find . -name '*.md' -exec sed -i 's/{% hint type=info %}/::: info/g' {} +
 find . -name '*.md' -exec sed -i 's/{% hint type="info" %}/::: info/g' {} +
 find . -name '*.md' -exec sed -i 's/{% hint style="information" %}/::: info/g' {} +
 
 find . -name '*.md' -exec sed -i 's/{% hint style="successful" %}/::: tip/g' {} +
+find . -name '*.md' -exec sed -i 's/{% hint style="success" %}/::: tip/g' {} +
 find . -name '*.md' -exec sed -i 's/{% hint style="warning" %}/::: warning/g' {} +
 find . -name '*.md' -exec sed -i 's/{% hint style="danger" %}/::: danger/g' {} +
 
 # replace manually
 # find . -name '*.md' -exec sed -i 's/::: info /::: info\n/g' {} +
 
+# pre-bugfix - plugins/plugins/storefront/add-data-to-storefront-page.md text->twig markup->yaml
+find . -name 'add-data-to-storefront-page.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name 'add-data-to-storefront-page.md' -exec sed -i "s/\`\`\`markup---%%%---<!-- in Resources\/config\/services.xml -->/\`\`\`xml---%%%---\/\/ Resources\/config\/services.xml---%%%---<?xml version=\"1.0\" ?>/g" {} +
+find . -name 'add-data-to-storefront-page.md' -exec sed -i "s/\`\`\`text---%%%---<!-- in Resources\/views\/storefront\/layout\/footer\/footer.html.twig -->/\`\`\`twig---%%%---\/\/ Resources\/views\/storefront\/layout\/footer\/footer.html.twig/g" {} +
+find . -name 'add-data-to-storefront-page.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
+# end hint
 find . -name '*.md' -exec sed -i 's/{% endhint %}/:::/g' {} +
+
+# start hints at the new line
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%---\( *\):::/---%%%---:::/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
 
 # rename
 find . -name 'README.md' -exec bash -c 'mv "$1" "${1/README/index}"' -- {} \;
@@ -34,9 +48,15 @@ find . -name '*.md' -exec sed -i 's/{% embed url="\(https:\/\/[^"]*\)\.md" capti
 
 # external embed - non-md
 find . -name '*.md' -exec sed -i 's/{% embed url="\(https:\/\/[^"]*\)" caption="\([^"]*\)" %}/<PageRef page="\1" title="\2" target="_blank" \/>/g' {} +
+find . -name '*.md' -exec sed -i 's/{% embed url="\(http:\/\/[^"]*\)" caption="\([^"]*\)" %}/<PageRef page="\1" title="\2" target="_blank" \/>/g' {} +
 
 # external embeds - empty caption
 find . -name '*.md' -exec sed -i 's/{% embed url="\(https:\/\/[^"]*\)\.md" caption="" %}/<PageRef page="\1" title="" target="_blank" \/>/g' {} +
+
+# <!-- markdown-link-check-disable-next-line -->
+find . -name '*.md' -exec sed -i 's/<!-- markdown-link-check-disable-next-line -->//g' {} +
+
+# <!-- markdown-link-check-disable --> + <!-- markdown-link-check-enable -->
 
 # tabs - T00D00 - is newline really needed?
 find . -name '*.md' -exec sed -i 's/{% tabs %}/\n<Tabs>/g' {} +
@@ -61,6 +81,37 @@ find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
 find . -name '*.md' -exec sed -i "s/\`\`\`markup---%%%---/\`\`\`html---%%%---/g" {} +
 find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
 
+# javascript to json
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/```javascript---%%%---{/``json---%%%---{/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
+# bugfix ``json
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%---``json/---%%%---```json/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
+# update text to twig
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/```text---%%%---{% raw %}/```twig---%%%---{% raw %}/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
+# bugfix twig and xml
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%---{% raw %}---%%%------%%%---```php/```twig---%%%---\/\/ \1/g' {} +
+find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%---{% raw %}---%%%------%%%---```markup/```twig---%%%---\/\/ \1/g' {} +
+find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%---{% raw %}---%%%------%%%---```text/```twig---%%%---\/\/ \1/g' {} +
+find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%---{% raw %}---%%%------%%%---```html/```twig---%%%---\/\/ \1/g' {} +
+find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\).xml" %}---%%%------%%%---```markup/```xml---%%%---\/\/ \1.xml/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
+# raw & endraw twig (outside)
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%---{% raw %}---%%%------%%%---```twig/```twig---%%%---\/\/ \1/g' {} +
+find . -name '*.md' -exec sed -i 's/{% raw %}---%%%------%%%---```/---%%%------%%%---```/g' {} +
+find . -name '*.md' -exec sed -i 's/```---%%%------%%%---{% endraw %}/```---%%%------%%%---/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
 # code - php, javascript, yaml, xml, html, css
 find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```php/```php---%%%---\/\/ \1/g' {} +
@@ -68,6 +119,7 @@ find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%-
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```yaml/```yaml---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```Yaml/```Yaml---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```xml/```xml---%%%---\/\/ \1/g' {} +
+find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%---```xml/```xml---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```css/```css---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```html/```html---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```dotenv/```dotenv---%%%---\/\/ \1/g' {} +
@@ -81,7 +133,14 @@ find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%-
 find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
 
 # extra single-line xml
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%---```xml/```xml\/\/ \1/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
+# extra twig
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\).twig" %}---%%%------%%%---```markup/```twig---%%%---\/\/ \1.twig/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
 
 # solve {% raw %} - twig, text, html, php
 # solve {% endraw %}
@@ -94,6 +153,12 @@ find . -name '*.md' -exec sed -i 's/{% code %}//g' {} +
 
 # endcode
 find . -name '*.md' -exec sed -i 's/{% endcode %}//g' {} +
+
+# four and three newlines
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%------%%%---/---%%%------%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/---%%%------%%%------%%%---/---%%%------%%%---/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
 
 # find . -name 'test.md' -exec sed 's/\[([^]]*)\]\((?!http)([^.]*)\.md\)/[\1](\2)/g' {} +
 
