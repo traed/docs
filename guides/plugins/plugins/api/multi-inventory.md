@@ -73,7 +73,7 @@ The following examples contain payloads for typical use-cases of this feature. B
     "payload": [{
         "id": "86d38702be7e4ac9a941583933a1c6f5",
         "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
-        "groups": [{
+        "warehouseGroups": [{
             "id": "8cf7736855594501aaf86351e147c61e"
         }],
         "warehouses": [{
