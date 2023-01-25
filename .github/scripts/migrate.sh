@@ -71,6 +71,9 @@ find . -name '*.md' -exec sed -i 's/{% tab title="\(.*\)" %}/<Tab title="\1">/g'
 find . -name '*.md' -exec sed -i 's/{% endtab %}/<\/Tab>/g' {} +
 find . -name '*.md' -exec sed -i 's/{% endtabs %}/<\/Tabs>/g' {} +
 
+# yml to yaml
+find . -name '*.md' -exec sed -i 's/```yml/```yaml/g' {} +
+
 # xml - replace newlines, replace xml-only, make newlines
 find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
 find . -name '*.md' -exec sed -i "s/\`\`\`markup---%%%---<?xml/\`\`\`xml---%%%---<?xml/g" {} +
@@ -122,7 +125,7 @@ find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```php/```php---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```javascript/```javascript---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```yaml/```yaml---%%%---\/\/ \1/g' {} +
-find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```Yaml/```Yaml---%%%---\/\/ \1/g' {} +
+find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```Yaml/```yaml---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```xml/```xml---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%---```xml/```xml---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```css/```css---%%%---\/\/ \1/g' {} +
