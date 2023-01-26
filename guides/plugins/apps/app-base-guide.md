@@ -106,7 +106,7 @@ Additionally, the request has the following headers:
 
 An example request may look like this:
 
-```http request
+```txt
 GET https://my.example.com/registration?shop-id=KIPf0Fz6BUkN&shop-url=http%3A%2F%2Fmy.shop.com&timestamp=159239728
 shopware-app-signature: a8830aface4ac4a21be94844426e62c77078ca9a10f694737b75ca156b950a2d
 sw-version: 6.4.5.0
@@ -363,7 +363,7 @@ Examples request body:
 You need to pass the `status` property, the content of the notification as `message` property and you can restrict users who can read the notification by passing `requiredPrivileges` property and `adminOnly` property inside the payload.
 When `adminOnly` is true, only admins can read this notification. If you don't send the `adminOnly` or `adminOnly` is false, you can pass the `requiredPrivileges` property so that users with specific permissions can read the notification. Otherwise, it will be displayed to every user.
 
-```http request
+```txt
 POST /api/notification
 
 {

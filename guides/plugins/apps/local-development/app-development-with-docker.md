@@ -147,7 +147,7 @@ This script can be executed from your `development` folder with `./psh.phar dock
 To make sure this script actually knows the ID of your app server which is running in the docker container, you need to define the `EXAMPLE_APP_SERVER_ID` in the `development/.psh.yaml.override`.  
 Your `development/.psh.yaml.override` should look like this:
 
-```Yaml
+```yaml
 // development/.psh.yaml.override
 # ...
 dynamic:

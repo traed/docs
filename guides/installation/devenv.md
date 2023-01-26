@@ -144,7 +144,7 @@ Make sure that the ports for the services are not already in use, or else the co
 
 Ensure to change your `.env` file to have the database connect using localhost's IP address instead of the default MySQL socket:
 
-```dotenv
+```txt
 // <PROJECT_ROOT>/.env
 DATABASE_URL="mysql://shopware:shopware@127.0.0.1:3306/shopware?sslmode=disable&charset=utf8mb4"
 ```

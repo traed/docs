@@ -274,7 +274,7 @@ abstract class AbstractProductRoute
 
 **Storefront**: Use the `deprecated` tag from TWIG, including a comment with the normal annotation.
 
-```HTML
+```html
 {% block the_block_name %}
     {% deprecated '@deprecated tag:v6.5.0 - Block will be removed completely including the content' %}
     <div>Content</div>
@@ -283,7 +283,7 @@ abstract class AbstractProductRoute
 
 **Administration**: Use normal TWIG comments for the annotation, as the other syntax is not supported.
 
-```HTML
+```html
 {% block the_block_name %}
     {# @deprecated tag:v6.5.0 - Block will be removed completely including the content #}
     <div>Content</div>
@@ -292,7 +292,7 @@ abstract class AbstractProductRoute
 
 #### Rename TWIG block
 
-```HTML
+```html
 {% block new_block_name %}
     {% block old_block_name %}
     {% deprecated '@deprecated tag:v6.5.0 - Use `new_block_name` instead' %}
@@ -303,7 +303,7 @@ abstract class AbstractProductRoute
 
 #### Deprecate CSS selectors
 
-```HTML
+```html
 {# @deprecated tag:v6.5.0 - CSS class "card-primary" is deprecated, use "card-major" instead #}
 <div class="card card-major card-primary">
     ...
