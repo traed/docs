@@ -71,8 +71,23 @@ find . -name '*.md' -exec sed -i 's/{% tab title="\(.*\)" %}/<Tab title="\1">/g'
 find . -name '*.md' -exec sed -i 's/{% endtab %}/<\/Tab>/g' {} +
 find . -name '*.md' -exec sed -i 's/{% endtabs %}/<\/Tabs>/g' {} +
 
+# zero width space
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/```\([a-zA-Z]*\)\xe2\x80\x8b---%%%---/```\1---%%%---/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
+# vcl to txt
+# dotenv to txt
+# http request to txt
 # yml to yaml
+# Yaml to yaml
+# HTML to html
+find . -name '*.md' -exec sed -i 's/```vcl/```txt/g' {} +
+find . -name '*.md' -exec sed -i 's/```dotenv/```txt/g' {} +
+find . -name '*.md' -exec sed -i 's/```http request/```txt/g' {} +
 find . -name '*.md' -exec sed -i 's/```yml/```yaml/g' {} +
+find . -name '*.md' -exec sed -i 's/```Yaml/```yaml/g' {} +
+find . -name '*.md' -exec sed -i 's/```HTML/```html/g' {} +
 
 # xml - replace newlines, replace xml-only, make newlines
 find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
