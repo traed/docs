@@ -141,6 +141,11 @@ find . -name '*.md' -exec sed -i 's/{% raw %}---%%%------%%%---```/---%%%------%
 find . -name '*.md' -exec sed -i 's/```---%%%------%%%---{% endraw %}/```---%%%------%%%---/g' {} +
 find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
 
+# bugfix automatically generated reference
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/```---%%%---{% endraw %}/```---%%%---/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
 # code - php, javascript, yaml, xml, html, css
 find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```php/```php---%%%---\/\/ \1/g' {} +
