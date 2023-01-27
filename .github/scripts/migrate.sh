@@ -119,6 +119,12 @@ find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
 find . -name '*.md' -exec sed -i 's/```text---%%%---{% raw %}/```twig---%%%---{% raw %}/g' {} +
 find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
 
+# fix automatically generated docs
+find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
+find . -name '*.md' -exec sed -i 's/        {% raw %}---%%%---        ```twig/        ```twig/g' {} +
+find . -name '*.md' -exec sed -i 's/        ```---%%%---        {% endraw %}/        ```---%%%---/g' {} +
+find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
+
 # bugfix twig and xml
 find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%---{% raw %}---%%%------%%%---```php/```twig---%%%---\/\/ \1/g' {} +
