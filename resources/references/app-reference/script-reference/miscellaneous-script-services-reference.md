@@ -18,7 +18,7 @@ Examples:
 
 {% foreach array as key => value %}
 ```
-{% endraw %}
+
 
 ### set()
 
