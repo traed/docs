@@ -479,6 +479,7 @@ As the new installation will get a new shopId, the installed apps will continue 
 ## API Docs
 
 ### Registration
+
 `GET https://my.example.com`
 
 #### Parameters
@@ -493,6 +494,7 @@ As the new installation will get a new shopId, the installed apps will continue 
 | shopware-app-signature* | string  | The hmac-signature of the query string, signed with the app secret                        |
 
 #### Responses
+
 `200`
 
 ```json
@@ -510,6 +512,7 @@ As the new installation will get a new shopId, the installed apps will continue 
 ```
 
 ### Confirmation
+
 `POST https://my.example.com`
 
 #### Parameters
@@ -527,4 +530,5 @@ As the new installation will get a new shopId, the installed apps will continue 
 | apiKey*                  | string  | ApiKey used to authenticate against the Shopware API                                                                                                                                                                                                                                                                                                               |
 
 #### Responses
+
 `200`
