@@ -149,6 +149,7 @@ find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
 # code - php, javascript, yaml, xml, html, css
 find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```php/```php---%%%---\/\/ \1/g' {} +
+find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```txt/```txt---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```javascript/```javascript---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```yaml/```yaml---%%%---\/\/ \1/g' {} +
 find . -name '*.md' -exec sed -i 's/{% code title="\([^"]*\)" %}---%%%------%%%---```Yaml/```yaml---%%%---\/\/ \1/g' {} +
@@ -220,8 +221,6 @@ find . -name '*.md' -exec sed -i 's/---%%%------%%%---```---%%%---/---%%%---```-
 find . -name '*.md' -exec sed -i 's/---%%%---$//g' {} +
 find . -name '*.md' -exec sed -i 's/---%%%------%%%---```$/---%%%---```/g' {} +
 find . -name '*.md' -exec sed -i "s/---%%%---/\n/g" {} +
-
-exit
 
 # four and three newlines
 find . -name '*.md' -exec sed -i ':a;N;$!ba;s/\n/---%%%---/g' {} +
